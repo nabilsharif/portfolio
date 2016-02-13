@@ -1,0 +1,56 @@
+# OSX
+#
+.DS_Store
+
+# Xcode
+#
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata
+*.xccheckout
+*.moved-aside
+DerivedData
+*.hmap
+*.xcuserstate
+project.xcworkspace
+
+# node.js
+#
+node_modules/
+npm-debug.log
+
+.idea
+
+# fastlane
+
+AppStore_com.barchick.messenger.mobileprovision
+Preview.html
+app.app.dSYM.zip
+report.xml
+
+environment_preprocess.h
+environment.plist
+
+admin/static/bundle.js
+admin/static/bundle.js.map
+admin/static/*.woff
+admin/static/*.woff2
+admin/static/*.svg
+admin/static/*.ttf
+admin/static/*.otf
+admin/static/*.eot
+Pods
+
+npm-debug*
+
+#c
+
+*.o
+*.s
+*.out

@@ -1,0 +1,1009 @@
+@import "bourbon/bourbon";
+
+$max-width: 80ch;
+
+@import "neat/neat";
+
+@import "font";
+
+$purple: #671DFF;
+$black: #0A0811;
+
+$pad: 8px;
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+}
+
+@mixin small() {
+  @media only screen and (max-width: 640px) {
+    @content; 
+  }
+}
+
+@mixin medium() {
+  @media only screen and (max-width: 960px) {
+    @content; 
+  }
+}
+
+@-webkit-keyframes kenburns {
+    0% {
+      opacity: 0;
+    }
+    5% {
+      opacity: 1;
+    }
+    95% {
+      transform: scale3d(1.5, 1.5, 1.5) translate3d(-190px, -120px, 0px);
+      -webkit-animation-timing-function: ease-in;
+      opacity: 1;
+    }
+    100% {
+      transform: scale3d(2, 2, 2) translate3d(-170px, -100px, 0px);
+      opacity: 0;
+    }
+}
+
+$purple: #EEC11A;
+$black: #212121;
+$indigo: #000000;
+
+@import "modular-scale";
+
+$ms-base: 16px;
+$ms-ratio: $fourth;
+
+.useCases {
+  text-align: center;
+  h1 {
+    font-size: ms(5);
+  }
+}
+
+body, a, input, button {
+  font-family: 'Circular', sans-serif;
+  font-weight: lighter;
+  color: white;
+  background: $black;
+}
+
+.drive-in {
+  z-index: 0;
+}
+
+.SignUpForm, .signUpFormComplete {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 9999;
+  background: $indigo;
+
+  padding: 4em 0;
+
+  .outer {
+    @include small {
+      @include span-columns(10);
+      @include shift(1);
+    }
+  }
+
+  h1 {
+    margin-top: 0;
+    margin-bottom: 0em;
+
+    @include small {
+      text-align: center;
+      font-size: ms(3);
+    }
+  }
+
+  p {
+    margin-bottom: 2em;
+    color: rgba(255,255,255,0.39);
+    @include span-columns(12);
+  }
+
+  .field {
+    @include span-columns(12);
+    margin-bottom: 3em;
+  }
+
+  .form {
+    @include span-columns(6);
+
+    @include small {
+      @include span-columns(12);
+    } 
+  }
+
+  .intro {
+    @include span-columns(6);
+
+    @include small {
+      @include span-columns(12);
+    }
+  }
+
+  input, .react-tel-input {
+    border: none;
+    border-bottom: 1px solid rgba(255,255,255,0.39);
+    font-size: ms(3);
+    padding: 0.25em 0;
+    background: transparent;
+    display: inline-block;
+    font-family: Apercu;
+    font-weight: lighter;
+    color: rgba(255,255,255,0.8);
+    @include span-columns(12);
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .react-tel-input {
+    padding: 0;
+  }
+
+  .react-tel-input input {
+    border: none;
+    outline: none;
+    border-radius: 0;
+    background: transparent;
+    font-size: ms(3) !important;
+    box-shadow: none;
+    height: auto;
+    padding-left: 0;
+    line-height: 1em;
+  }
+
+  .react-tel-input .flag-dropdown {
+    background: blue;
+    border: none;
+    height: 64px;
+    position: absolute;
+    bottom: 0;
+    display: none !important;
+
+    .selected-flag {
+      position: relative;
+      top: 1.75rem;
+    }
+
+    &:hover {
+      background: $purple;
+
+      .selected-flag {
+        background: transparent;
+      }
+    }
+
+    .country-list {
+      background: $indigo;
+      border: none;
+      box-shadow: 0px 10px 40px rgba(0,0,0,0.8);
+
+      .country {
+        font-size: ms(1);
+
+        .dial-code {
+          font-size: ms(0);
+        }
+
+        &:hover {
+          background: $purple;
+          color: $black;
+        }
+
+        &.highlight {
+          background: black;
+        }
+      }
+    }
+  }
+
+  label {
+    display: inline-block;
+    text-transform: uppercase;
+    font-family: Circular;
+    color: rgba(255,255,255,0.39);
+    @include span-columns(12);
+  }
+}
+
+.signUpFormComplete {
+  background: $purple; 
+
+  h1 {
+    color: $black !important;
+  }
+
+  p {
+    color: rgba(0,0,0,0.39) !important;
+  }
+}
+
+.smallTitle {
+  letter-spacing: 0.5em;
+  color: rgba(255,255,255,0.61);
+  position: relative;
+  font-size: ms(0);
+  font-family: Circular;
+  line-height: 1.5em;
+
+  &--area {
+    margin: 1rem 0 1rem;
+    @include span-columns(12);
+  }
+}
+
+body, html, #app, #app > div, .slide, .slideList, .container {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.drive-in {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+}
+
+.slide {
+  position: relative;
+
+  .slideBackground, .slideBackgroundOverlay {
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    overflow: hidden;
+    transform: skewY(-2deg) translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    z-index: -1;
+  }
+
+  .slideBackground {
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .slideBackgroundOverlay {
+    background: rgba(0,0,0, 0.61);
+  }
+
+  &--backgroundFade {
+
+    .slideBackground {
+      background-position: center top !important;
+      background-size: auto;
+    }
+
+    .slideBackgroundOverlay {
+      @include linear-gradient(rgba(0,0,0, 0.33), transparent);
+    }
+  }
+
+  &--quote {
+    z-index: 99;
+    position: relative;
+
+    &:first-child {
+      margin-top: -4em;
+    }
+
+    .slideBackground {
+      background-color: white;
+    }
+
+    .smallTitle, h2 {
+      color: rgba(0,0,0,0.39);
+    }
+
+    h1, h2 {
+      color: $black;
+    }
+
+    .eveningStandardLogo {
+      margin: 0.75em 0 0rem;
+      height: ms(2);
+    }
+
+    @include small {
+      padding-left: 1em !important;
+      padding-right: 1em !important;
+    }
+  }
+
+  &--fullLength {
+    float: left;
+    height: auto;
+    padding: 1.5em*3 0;
+    poition: relative;
+
+    @include small {
+      padding-top: 1.5em;
+      padding-bottom: 1.5em;
+    }
+  }
+
+  @include small {
+
+    h1 {
+      font-size: ms(2) !important;
+      text-align: center !important;
+    }
+
+    p {
+      text-align: center !important;
+    }
+
+    button {
+      margin-left: auto;
+      margin-right: auto;
+      display: table;
+    }
+  }
+}
+
+$panelHeight: 1.5em*9;
+
+.slide--footer {
+  background: $indigo;
+  color: rgba(255,255,255,0.39);
+
+  padding: 1em;
+  line-height: 1.5em;
+}
+
+.slide--useCase {
+  @include span-columns(12);
+
+  h1, .smallTitle, p {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: table;
+  }
+}
+
+.slide--benefit {
+  &:hover {
+    cursor: pointer;
+    .slideBackground {
+      background: $indigo !important;
+    }
+
+    h1 {
+      left: 1ch;
+    }
+  }
+
+  h1 {
+    transform: skewY(-2deg) translate3d(0, 0, 0);
+    margin: 0;
+    line-height: 1em;
+    transition: 100ms ease-in-out;
+  }
+
+  @for $i from 1 through 8 {
+    &:nth-child(#{$i}) {
+      .slideBackground {
+        transition: 100ms ease-in-out;
+        background: shade(#222, $i*10);
+      }
+    }
+  }
+}
+
+.conversation {
+  display: table;
+  margin: 0 auto;
+  width: 320px;
+}
+
+.conversation {
+  margin: 0 auto 1.5em*2;
+}
+
+.info {
+  @include span-columns(12);
+
+  p {
+    color: rgba(255,255,255,0.61);
+  }
+}
+
+.outer {
+  @include outer-container;
+}
+
+.slide--howItWorks {
+  display: none;
+
+  .slideBackground {
+    background-color: black;
+  }
+}
+
+.example {
+  @include span-columns(8);
+  margin-bottom: -20rem;
+  z-index: -1;
+  position: relative;
+}
+
+.slide--hero {
+  background: black;
+
+  &:nth-of-type(1) {
+    height: 94%;
+  }
+
+  h1 {
+    color: #fff;
+    font-size: ms(5);
+    text-align: left;
+  }
+
+  p {
+    color: rgba(255,255,255,0.8);
+    text-align: left;
+  }
+
+  .button {
+    position: relative;
+  }
+
+  & + .slide {
+    margin-top: -4em;
+  }
+}
+
+.slide--experience {  
+  .slideBackground {
+    background-color: black;
+  }
+
+  p {
+    margin-bottom: 3em;
+    color: rgba(255,255,255,0.61);
+  }
+}
+
+.ctaWrapper {
+  @include span-columns(12);
+  margin: 4rem auto;
+}
+
+.panel {
+  z-index: 99;
+  position: relative;
+  border-radius: 1px;
+  position: relative;
+  height: $panelHeight;
+  @include span-columns(12);
+  background: black;
+  border-top: 1px solid #222;
+
+  .image {
+    @include span-columns(8);
+
+    @include small {
+      @include span-columns(12);
+      height: 20rem;
+    }
+
+    height: $panelHeight;
+    background-size: cover;
+    background-position: center center;
+  }
+
+  h1 {
+    line-height: 1.5em;
+    font-size: ms(1);
+    font-weight: lighter;
+    color: rgba(255,255,255,1);
+    text-transform: uppercase;
+    letter-spacing: 0.5ch;
+    padding: 0;
+  }
+
+  .flexCenter {
+    @include span-columns(4);
+    height: $panelHeight;
+    display: flex;
+    @include pad;
+
+    flex-direction: column;
+
+    @include small {
+      @include span-columns(12);
+      height: auto;
+    }
+
+    p {
+      display: block;
+      font-size: ms(0);
+      color: $black;
+      text-align: left;
+      color: white;
+      font-family: Apercu;
+      opacity: 0.75;
+      display: none;
+
+      @include medium {
+        font-size: ms(1);
+      }
+    }
+  }
+
+  &--big {
+    height: auto;
+
+    .image {
+      @include span-columns(12);
+      height: $panelHeight*2;
+    }
+
+    .flexCenter {
+      @include span-columns(12);
+      height: auto;
+
+      h1 {
+        text-align: center;
+        margin-top: 0rem;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}
+
+.images {
+  button {
+    background: transparent;
+    color: white;
+    letter-spacing: 10px;
+    font-size: ms(1);
+    text-transform: uppercase;
+    font-family: Circular;
+    border: none;
+    border-radius: 8px;
+    padding: $pad $pad*2;
+    line-height: 248px;
+  }
+}
+
+.card {
+  img {
+    width: 100%;
+    border-top-right-radius: 7px;
+    border-top-left-radius: 7px;
+  }
+
+  .cardName {
+    color: #aaa;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    text-align: center;
+    width: 100%;
+    margin-top: 8px;
+    display: block;
+  }
+
+  .cardQuote {
+    width: 100%;
+    color: #888;
+    line-height: 1.5em;
+    font-family: Apercu;
+    font-size: ms(0);
+    padding: 8px;
+    display: block;
+    margin-bottom: 8px;
+  }
+}
+
+.bubble {
+  max-width: 25ch;
+  position: relative;
+  display: inline-block;
+  border-radius: 15px;
+  text-align: left;
+  margin-bottom: 1em;
+  font-weight: 400;
+  position: relative;
+  background: $purple;
+  box-shadow: 0px 4px 16px rgba(0,0,0,0.15);
+
+  .bubbleSpeechTick {
+    width: 1em;
+    position: absolute;
+    bottom: -0.2em;
+    z-index: 1;
+    transform: translate3d(0,0,0);
+  }
+
+  .bubbleText {
+    font-size: ms(0);
+    font-family: Apercu;
+    line-height: 1.4em;
+    font-weight: light;
+    display: block;
+    opacity: 0.9;
+    padding: 8px 12px;
+    color: $black;
+  }
+
+  float: right;
+
+  .bubbleSpeechTick {
+    right: -4.4px;
+  }
+
+  &--fromBarChick {
+    float: left;
+    background-color: #000;
+
+    .bubbleText {
+      color: rgba(255,255,255,0.61);
+    }
+
+    .bubbleSpeechTick {
+      left: -4px;
+
+      // TODO replace with another image
+      transform: scaleX(-1);
+      z-index: 0;
+    }
+  }
+}
+
+.clear {
+  clear: both;
+  width: 100%;
+}
+
+.smallPrint {
+  color: rgba(255,255,255,0.39);
+  @include span-columns(12);
+  margin-top: 1em;
+  line-height: 1.5em;
+}
+
+.homepage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background: rgba(0,0,0, 0.39);
+
+  @include small {
+    padding: 16px;
+    background: rgba(0,0,0, 0.8);
+  }
+}
+
+h1 {
+  font-size: ms(4);
+  line-height: 1em;
+  margin-bottom: 0.25rem;
+  margin-top: 0.25em;
+  left: -2px;
+  position: relative;
+
+  @include medium {
+    font-size: ms(3);
+  }
+
+  @include small {
+    font-size: ms(3);
+  }
+}
+
+h2 {
+  font-size: ms(1);
+  line-height: 1.5em;
+  margin-bottom: 0.25rem;
+  font-weight: lighter;
+  opacity: 0.9;
+  font-family: Apercu;
+
+  @include medium {
+    font-size: ms(1);
+  }
+
+  @include small {
+    font-size: ms(0);
+  }
+}
+
+.center {
+  @include outer-container;
+}
+  
+.flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.flexCenterChild {
+  // max-width: 960px;
+  @include outer-container;
+}
+
+.header {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: transparent;
+  transition: 100ms ease-in-out background;
+
+  .logo {
+    z-index: 9999;
+  }
+
+  button.button {
+    opacity: 0;
+    position: absolute;
+  }
+}
+
+.sticky { 
+  z-index: 999 !important;
+
+  .header {
+    height: 4rem;
+    display: block;
+    width: 100%;
+    background-color: rgba(0,0,0,0.95);
+    z-index: 9999;
+    transform: translate3d(0,0,0);
+
+    .logo {
+      top: 1.1rem;
+      height: ms(2);
+      left: 1rem;
+    }
+
+    button {
+      opacity: 1;
+      top: 0.6rem;
+      right: 0;
+      transform: scale(0.75);
+    }
+
+    @include small {
+      height: 4.5rem;
+
+      .logo {
+        display: none;
+      }
+
+      button {
+        top: 1em;
+        width: 90%;
+        left: 0;
+        right: 0;
+        transform: scale(1);
+      }
+    }
+  }
+}
+
+.logo {
+  position: fixed;
+  top: 1.1rem;
+  height: ms(2);
+  left: 1rem;
+  z-index: 9999;
+
+  @include small {
+    position: fixed;
+    top: 1em;
+    display: table;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 240px;
+  }
+}
+
+p {
+  font-size: ms(1);
+  line-height: 1.5em;
+  opacity: 0.99;
+  font-weight: lighter;
+  font-family: Apercu;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include small {
+    font-size: ms(0);
+  }
+
+  @include medium {
+    font-size: ms(0);
+  }
+}
+
+button.button {
+  text-decoration: none;
+  background: $purple;
+  border: none;
+  border-bottom: 1px solid rgba(0,0,0,0.5);
+}
+
+.thanks {
+  font-weight: 200;
+  color: #fff;
+  opacity: 0.8;
+  transition: 100ms all;
+  text-align: center;
+  font-size: 24px;
+  display: table;
+  margin: 0 auto;
+
+  @include small {
+    font-size: ms(0);
+  }
+
+  @include medium {
+    font-size: ms(0);
+  }
+
+  .chat-icon {
+    height: 30px;
+    position: relative;
+    top: 0.33rem;
+    margin-right: 1ch;
+
+    @include small {
+      height: 24px;
+    }
+  }
+}
+
+$placeholderColor: $purple;
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    $placeholderColor;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    $placeholderColor;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    $placeholderColor;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    $placeholderColor;
+}
+:placeholder-shown { /* Standard (https://drafts.csswg.org/selectors-4/#placeholder) */
+  color:    $placeholderColor;
+}
+
+.go-button {
+  padding: 0.5rem 1rem;
+  background: $purple;
+  font-family: 'Circular', 'sans-serif';
+  color: $black;
+  border: none;
+  border-radius: 2px;
+  font-size: ms(0);
+  line-height: 2rem;
+  font-weight: 200;
+  opacity: 0;
+<<<<<<< HEAD
+  -webkit-transition: 150ms all;
+  -moz-transition: 150ms all;
+  -o-transition: 150ms all;
+=======
+  vertical-align: top;
+>>>>>>> 172e751... Updated homepage
+  transition: 150ms all;
+  z-index: 9999;
+  margin-left: 8px;
+  pointer-events: none;
+
+  @include small {
+    font-size: ms(0);
+  }
+
+  @include medium {
+    font-size: ms(0);
+  }
+
+  &:focus, &:active {
+    outline: none;
+  }
+
+  &:focus {
+    opacity: 0.5;
+  }
+
+  &.visible {
+    opacity: 0.9;
+    pointer-events: auto;
+  }
+}
+
+.input-wrapper {
+  position: relative;
+  min-width: 20ch;
+}
+
+.button {
+  background: $purple;
+  padding: 0.5rem 2ch;
+  font-size: ms(1);
+  min-width: 14ch;
+  color: $black;
+  border-radius: 2px;
+  transition: 150ms all;
+  border: 2px solid $purple;
+  border-bottom: 2px solid rgba(0,0,0,0.1);
+
+  &:hover {
+    background: shade($purple, 20%);
+    cursor: pointer;
+  }
+
+  &:active {
+    position: relative;
+    top: 3px;
+  }
+
+  @include small {
+    font-size: ms(0);
+  }
+
+  @include medium {
+    font-size: ms(0);
+  }
+
+  &.input {
+    border: 2px solid #fff;
+    // text-align: center;
+    background: #fff;
+    font-weight: 200;
+    // display: table;
+    color: $black;
+    // margin: 0 auto;
+    // display: inline-block;
+    margin-right: -67px;
+    opacity: 0.9;
+
+    @include small {
+      font-size: ms(0);
+    }
+
+    @include medium {
+      font-size: ms(0);
+    }
+
+    &.valid {
+      margin-right: auto;
+    }
+
+    &:focus {
+      outline: none !important;
+    }
+  }
+}
+

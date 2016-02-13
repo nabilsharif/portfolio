@@ -1,0 +1,286 @@
+@import "bourbon/bourbon";
+
+$max-width: 80ch;
+
+@import "neat/neat";
+
+$pad: 8px;
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+}
+
+@mixin S() {
+  @media only screen and (max-width: 640px) {
+    @content; 
+  }
+}
+
+@mixin M() {
+  @media only screen and (max-width: 960px) {
+    @content; 
+  }
+}
+
+$darkblue: #051B31;
+$red: #B02025;
+$purple: #45306C;
+$blue: #00B8FF;
+
+@import "modular-scale";
+
+$ms-base: 16px;
+$ms-ratio: $fourth;
+
+$slant: 6deg;
+
+body {
+  background: $darkblue;
+  font-family: 'Open Sans';
+  line-height: 1.5em;
+}
+
+@mixin center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+body, html, #app, #app > div, .page, .slide, .slideList, .container {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+p {
+  line-height: 1.5em;
+  font-size: ms(0);
+  color: white;
+  margin-bottom: 1.5em;
+}
+
+
+@mixin title {
+  margin-top: 0;
+  line-height: 1em;
+  margin-bottom: 0.1em;
+  font-size: ms(5);
+  color: white;
+  position: relative;
+  text-transform: uppercase;
+
+  @include S {
+    font-size: ms(3);
+  }
+
+  & + .titleUnderline {
+    height: ms(-3);
+    font-size: ms(5);
+    background: white;
+    width: 4ch;
+    margin-left: 0em;
+    left: 0;
+
+    @include S {
+      height: ms(-5);
+    }
+  }
+}
+
+.slide {
+  @include center;
+}
+
+.slide--back {
+  margin-bottom: -4em;
+  background: $darkblue;
+  z-index: 9999;
+  padding: 1em 0 !important;
+
+  a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: ms(1);
+  }
+}
+
+.projectHero {
+  @include outer-container;
+
+  &__heroImage {
+    @include span-columns(6);
+
+    @include S {
+      @include span-columns(12);
+    }
+  }
+
+  &__info {
+    @include span-columns(6);
+
+    @include S {
+      @include span-columns(12);
+    }
+  }
+}
+
+.screenshot {
+  @include outer-container;
+
+  &__name {
+    @include title;
+  }
+
+  .screenshotList__title {
+    @include span-columns(12);
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .column {
+    &__title {
+      @include span-columns(12);
+      text-align: center;
+      margin-bottom: 1.5em;
+      text-transform: uppercase;
+    }
+
+    &__img {
+      @include span-columns(12);
+    }
+  }
+
+  .screenshotList {
+    &--2 {
+      .column {
+        @include span-columns(6);
+
+        @include S {
+          @include span-columns(12);
+        }
+      }
+    }
+
+    &--3 {
+      .column {
+        @include span-columns(4);
+
+        @include S {
+          @include span-columns(12);
+        }
+      }
+    }
+  }
+}
+
+.hero {
+  @include outer-container;
+
+  &__logo {
+    @include span-columns(12);
+  }
+
+  &__body {
+    color: white;
+    font-size: ms(2);
+    line-height: 1.5em;
+    text-align: center;
+
+    @include S {
+      font-size: ms(1);
+    }
+  }
+}
+
+.project {
+  @include outer-container;
+
+  &__category {
+    font-size: ms(0);
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold;
+  }
+
+  &__name {
+    @include title;
+  }
+
+  &__body {
+    font-size: ms(1);
+  }
+
+  &__viewWorkButton {
+    display: table;
+    margin: 0 auto;
+  }
+}
+
+a.button {
+  background: white;
+  border-radius: 4px;
+  font-size: ms(1);
+  padding: $pad $pad*4;
+  text-decoration: none;
+  color: black;
+  border: none;
+  outline: none;
+}
+
+.slide {
+  position: relative;
+
+  &--skew {
+    .slideBackground, .slideBackgroundOverlay {
+      transform: skewY($slant) translate3d(0, 0, 0);
+    }
+  }
+
+  .slideBackground, .slideBackgroundOverlay {
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    overflow: hidden;
+    backface-visibility: hidden;
+    z-index: -1;
+  }
+
+  .slideBackground {
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .slideBackgroundOverlay {
+    background: rgba(0,0,0, 0.61);
+  }
+
+  &--fullLength {
+    float: left;
+    height: auto;
+    padding: 1.5em*3 0;
+    poition: relative;
+
+    @include S {
+      padding-top: 3em !important;
+      padding-bottom: 3em !important;
+    }
+  }
+
+  @include S {
+    padding: 1rem;
+  }
+}
+
+.slide--hero {
+
+}
+
