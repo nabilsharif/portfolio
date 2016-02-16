@@ -63,7 +63,7 @@ body, html, #app, #app > div, .page, .slide, .slideList, .container {
 
 p {
   line-height: 1.5em;
-  font-size: ms(0);
+  font-size: ms(1);
   color: white;
   margin-bottom: 1.5em;
 }
@@ -171,10 +171,11 @@ p {
 }
 
 .slide--back {
-  margin-bottom: -4em;
+  margin-bottom: -8em;
   background: $darkblue;
   z-index: 9999;
   padding: 1em 0 !important;
+  display: none;
 
   a {
     color: white;
@@ -184,12 +185,22 @@ p {
   }
 }
 
+.slide--projectHero {
+  margin-top: -6em;
+}
+
 .projectHero {
   @include outer-container;
-  margin: 4em auto;
+
+  margin-top: 8em;
+  margin-bottom: 0;
 
   img {
     max-width: 100%;
+  }
+
+  &__logo {
+    max-height: ms(5);
   }
 
   &__visitSiteButton {
@@ -237,6 +248,7 @@ p {
       text-align: center;
       margin-bottom: 1.5em;
       text-transform: uppercase;
+      font-size: ms(0);
     }
 
     &__img {
