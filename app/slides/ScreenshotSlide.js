@@ -4,7 +4,7 @@ import Slide from './Slide';
 export default class ScreenshotSlide extends React.Component {
   render() {
     const screenshotListClassnames = ['screenshotList', 'screenshotList--' + this.props.columns];
-    const classNames = ['slide--screenshot']
+    const classNames = ['slide--screenshot', this.props.className];
 
     if (this.props.backgroundColor === '#FFFFFF') {
       classNames.push('slide--white-background')
@@ -21,8 +21,8 @@ export default class ScreenshotSlide extends React.Component {
           <p className="screenshot__body" style={{color: this.props.bodyColor}}>{this.props.body}</p>
         </div>
 
+        {this.props.oneColumnTitle && <div style={{color: this.props.bodyColor}} className="screenshotList__title">{this.props.oneColumnTitle}</div>}
         <div className={screenshotListClassnames.join(' ')}>
-          {this.props.oneColumnTitle && <div style={{color: this.props.bodyColor}} className="screenshotList__title">{this.props.oneColumnTitle}</div>}
           {this.props.columnInfo.map((c) => {
             return <div className="column">
               <span className="column__title" style={{color: this.props.bodyColor}}>{c.title}</span>

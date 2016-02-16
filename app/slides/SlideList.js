@@ -6,6 +6,7 @@ import ProjectHeroSlide from './ProjectHeroSlide';
 import ProjectSlide from './ProjectSlide';
 import ScreenshotSlide from './ScreenshotSlide';
 import BackSlide from './BackSlide';
+import NextProjectSlide from './NextProjectSlide';
 
 import {TrackDocument, Track, TrackedDiv} from 'react-track';
 import {topTop,
@@ -25,6 +26,7 @@ const slideRegistry = {
   'ProjectHeroSlide': ProjectHeroSlide,
   'ScreenshotSlide': ScreenshotSlide,
   'BackSlide': BackSlide,
+  'NextProjectSlide': NextProjectSlide
 }
 
 export default class SlideList extends React.Component {  

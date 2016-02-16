@@ -15,6 +15,7 @@ const snappaSlides = [
     props: {
       backgroundImageUrl: '/SnappaHomeHero.png',
       skew: true,
+      projectUrl: 'http://snappa.press.net',
       project: {
         body: 'PA’s new service (SNAPPA) is aimed at attracting and engaging younger audiences who increasingly consume content on mobile devices. SNAP.PA presents a visually led, shareable content with personality – encompassing news, sport, celebrity, social media, real life and more.',
         logo: '/SnappaLogo.svg',
@@ -73,6 +74,14 @@ const snappaSlides = [
         { image: './b2c/HJomepageB2cV2.jpg', title: 'Version 2' },
       ]
     }
+  },
+
+  {
+    component: 'NextProjectSlide',
+    props: {
+      name: 'Sticky9',
+      nextProjectUrl: '/sticky9'
+    }
   }
 ]
 
@@ -88,6 +97,7 @@ const sticky9Slides = [
     props: {
       backgroundImageUrl: '/sticky9/Sticky9HomeHero.png',
       skew: true,
+      projectUrl: 'http://sticky9.com',
       project: {
         body: 'Sticky9 turns your favorite Instagram and Facebook snaps into Magnets. They also do personalised phone covers, posters, prints and stickers. The core audience of Sticky9 is very young millennial mums to be exact. The product is vibrant and fun which is reflected in the brand and design of the site and app.',
         logo: '/sticky9/Sticky9Logo.png',
@@ -124,7 +134,7 @@ const sticky9Slides = [
       bodyColor: '#45306C',
       titleColor: '#45306C',
       body: 'I have created a number of other  responsive pages, to improve various parts on the site like customer service by designing a ‘Where is my order’ page and a more prominent way to highlight the Sticky9 app on the Download page.',
-      columns: 2,
+      className: 'slide--screenshot--sticky9',
       columnInfo: [
         { image: './sticky9/WismoDesktop.png', title: 'WISMO Desktop' },
         { image: './sticky9/MobileWismo.png', title: 'WISOMO Mobile' },
@@ -150,9 +160,6 @@ const sticky9Slides = [
         { image: './sticky9/MagnetBoard.png', title: 'Magnet Board' },
         { image: './sticky9/StripBoard.png', title: 'Magnet Strip' },
         { image: './sticky9/ShelfBoard.png', title: 'Print Shelf' },
-        { image: './sticky9/AddAccessory.png', title: 'Accessories' },
-        { image: './sticky9/MagnetSize.png', title: 'Magent Size' },
-
       ]
     }
   },
@@ -166,7 +173,7 @@ const sticky9Slides = [
       bodyColor: '#45306C',
       titleColor: '#45306C',
       body: 'The menu was updated and rejigged to make it cleaner. The new menu also works better when translated into other languages. By splitting up the buttons into a new line, I was able to create more space and movement between the words and also make it easier to add additional menu items.',
-      columns: 2,
+      columns: 1,
       columnInfo: [
         { image: './sticky9/OldNavPart1.png', title: 'Old Nav' },
         { image: './sticky9/OldNavPart2.png', title: 'Old Dropdown' },
@@ -176,6 +183,14 @@ const sticky9Slides = [
     }
 
   },
+
+  {
+    component: 'NextProjectSlide',
+    props: {
+      nextProjectUrl: '/transferwise',
+      name: 'Transferwise'
+    }
+  }
 
  
 ]
@@ -208,18 +223,18 @@ const transferWiseSlides = [
       backgroundColor: '#01C5FF',
       bodyColor: '#ffffff',
       titleColor: '#ffffff',
-      oneLineTitle: 'Version 1',
+      oneColumnTitle: 'Version 1',
       body: 'Below showcases the screens from the mobile flow of the site. The idea behind the design was to get the user into the story pages within a click from the main / home page. The navigation would slide in from the right, which will allow the users to scroll between trending tags.',
-      columns: 3,
+      columns: 4,
       columnInfo: [
-        { image: './transferwise/OnboardingStep1.png', title: 'Homepage' },
-        { image: './transferwise/OnboardingStep2.png', title: 'Homepage' },
-        { image: './transferwise/OnboardingStep3.png', title: 'Homepage' },
-        { image: './transferwise/OnboardingStep4.png', title: 'Homepage' },
-        { image: './transferwise/OnboardingStep1V2.png', title: 'Homepage' },
-        { image: './transferwise/OnboardingStep2V2.png', title: 'Homepage' },
-        { image: './transferwise/OnboardingStep3V2.png', title: 'Homepage' },
-        { image: './transferwise/OnboardingStep4V2.png', title: 'Homepage' },
+        { image: './transferwise/OnboardingStep1.png', title: '' },
+        { image: './transferwise/OnboardingStep2.png', title: '' },
+        { image: './transferwise/OnboardingStep3.png', title: '' },
+        { image: './transferwise/OnboardingStep4.png', title: '' },
+        { image: './transferwise/OnboardingStep1V2.png', title: '' },
+        { image: './transferwise/OnboardingStep2V2.png', title: '' },
+        { image: './transferwise/OnboardingStep3V2.png', title: '' },
+        { image: './transferwise/OnboardingStep4V2.png', title: '' },
       ]
     }
   },
@@ -231,38 +246,29 @@ const transferWiseSlides = [
       backgroundColor: '#ffffff',
       bodyColor: '#01C5FF',
       titleColor: '#01C5FF',
-      oneLineTitle: 'Version 1',
+      oneColumnTitle: 'Drill down FAQ',
       body: 'Below showcases the screens from the mobile flow of the site. The idea behind the design was to get the user into the story pages within a click from the main / home page. The navigation would slide in from the right, which will allow the users to scroll between trending tags.',
-      columns: 3,
+      columns: 4,
       columnInfo: [
-        { image: './transferwise/SettingsAndFaQ1.png', title: 'Homepage' },
-        { image: './transferwise/SettingsAndFaQ2.png', title: 'Homepage' },
-        { image: './transferwise/SettingsAndFaQ3.png', title: 'Homepage' },
-        { image: './transferwise/SettingsAndFaQ4.png', title: 'Homepage' },
+        { image: './transferwise/SettingsAndFaQ1.png', title: '' },
+        { image: './transferwise/SettingsAndFaQ2.png', title: '' },
+        { image: './transferwise/SettingsAndFaQ3.png', title: '' },
+        { image: './transferwise/SettingsAndFaQ4.png', title: '' },
 
 
       ]
     }
   },
 
-
-
-
-
-
-
-
-
-
-
-
-
+  {
+    component: 'NextProjectSlide',
+    props: {
+      nextProjectUrl: '/snappa',
+      name: 'Snappa'
+    }
+  }
 
 ]
-
-
-
-
 
 
 

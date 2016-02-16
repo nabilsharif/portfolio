@@ -4,7 +4,7 @@ import { Router, Route, Link, browserHistory } from 'react-router'
 
 export default class ProjectSlide extends React.Component {
   render() {
-    return <Slide className="slide--project" fullLength={true} skew={true} backgroundColor={this.props.backgroundColor}>
+    return <Slide className="slide--project" fullLength={false} skew={true} backgroundColor={this.props.backgroundColor}>
       <div className="project">
           <span className="project__category">{this.props.category}</span>
           <span>
