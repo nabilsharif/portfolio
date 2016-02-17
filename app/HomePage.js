@@ -6,7 +6,7 @@ const slides = [
   {
     component: 'HeroSlide',
     props: {
-      body: "Nabil Sharif is a UX & UI Designer born and bred in London-town. He has worked across web design, print, branding, UI, UX and design leadership. Nabil latest obsession is visual design from the 80s. You can find him either listening to Run DMC or working at Sticky9."
+      body: "As a UI & UX designer born and bred in London, I have worked across web, product, UI, UX, mobile, branding and print design. My skills range from user testing, wireframing, prototyping to creating detailed visual comps to name but a few."
     }
   },
   {
@@ -15,8 +15,8 @@ const slides = [
       backgroundColor: '#B02025',
       name: 'SNAPPA',
       path: '/snappa',
-      category: 'Web and mobile site',
-      body: 'PA’s new service (SNAPPA) is aimed at attracting and engaging younger audiences who increasingly consume content on mobile devices.'
+      category: 'UI/UX design',
+      body: 'A new service by The Press Association which is aimed at attracting and engaging a younger audience.'
     }
   },
   {
@@ -26,7 +26,7 @@ const slides = [
       path: '/sticky9',
       name: 'STICKY9',
       category: 'UI/UX Design',
-      body: 'PA’s new service (SNAPPA) is aimed at attracting and engaging younger audiences who increasingly consume content on mobile devices.'
+      body: 'Sticky9 is a web and app based platform that turns your favorite Instagram and Facebook snaps into magnets and stickers.'
     }
   },
   {
@@ -36,7 +36,7 @@ const slides = [
       path: '/transferwise',
       name: 'Transferwise',
       category: 'UI/UX Design',
-      body: 'PA’s new service (SNAPPA) is aimed at attracting and engaging younger audiences who increasingly consume content on mobile devices.'
+      body: 'TransferWise is an Estonian developed and UK-based peer-to-peer money transfer service for web and mobile.'
     }
   }
 ]

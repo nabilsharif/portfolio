@@ -34,7 +34,7 @@ const snappaSlides = [
       backgroundColor: '#ffffff',
       bodyColor: '#444',
       titleColor: '#B02025',
-      body: 'Below showcases the screens from the mobile flow of the site. The idea behind the design was to get the user into the story pages within a click from the main / home page. The navigation would slide in from the right, which will allow the users to scroll between trending tags.',
+      body: 'Below showcases the screens from the mobile flow of the site. The idea behind the design was to get the user into the story pages within a click from the landing page. The navigation would slide in from the right, which will allow the users to scroll between trending tags.',
       columns: 3,
       columnInfo: [
         { image: './mobile/SnappaCategoriesMobile.png', title: 'Homepage' },
@@ -48,6 +48,7 @@ const snappaSlides = [
     component: 'ScreenshotSlide',
     props: {
       backgroundColor: '#B02025',
+      bodyColor: '#ffffff',
       title: 'Desktop',
       skew: true,
       body: 'The Desktop version was more focused on a visually led homepage, with big high quality images and a slider to show the latest emerging stories. All of the content was split into categories for ease of navigation.',
@@ -62,9 +63,9 @@ const snappaSlides = [
   {
     component: 'ScreenshotSlide',
     props: {
-      title: 'B2C',
+      title: 'B2C Visual Comps',
       skew: true,
-      body: 'After a very successful launch of the the SNAPPA site PA were looking to redesign the site to cater to a more of a B2C audience. Below are some initial design ideas for the project. The focus here was about splitting the content into different sections, and cater the design to much younger audience.',
+      body: 'After a very successful launch of the the Snappa site Press Association were looking to redesign the site to cater to a more of a B2C audience. Below are some initial design ideas for the project. The focus here was about splitting the content into different sections, and cater the design to much younger audience.',
       backgroundColor: '#ffffff',
       bodyColor: '#444',
       titleColor: '#B02025',
@@ -99,7 +100,7 @@ const sticky9Slides = [
       skew: true,
       projectUrl: 'http://sticky9.com',
       project: {
-        body: 'Sticky9 turns your favorite Instagram and Facebook snaps into Magnets. They also do personalised phone covers, posters, prints and stickers. The core audience of Sticky9 is very young millennial mums to be exact. The product is vibrant and fun which is reflected in the brand and design of the site and app.',
+        body: 'Sticky9 turns your favorite Instagram and Facebook snaps into Magnets. They also do personalised phone covers, posters, prints and stickers. The core audience of Sticky9 is very young, millennial mums to be exact. The product is vibrant and fun which is reflected in the brand and design of the site and app.',
         logo: '/sticky9/Sticky9Logo.png',
         projectShotUrl: './sticky9/Sticky9HomeMobile.png',
         projectColor: '#B02025'
@@ -115,7 +116,7 @@ const sticky9Slides = [
       backgroundColor: '#45306C',
       bodyColor: '#ffffff',
       titleColor: '#ffffff',
-      body: 'Version 1 was a quick fix to incorporate an extra product on the page and to highlight the social aspect of the community as an upsell for ideas of how people are using the product. Version 2 is a project in progress, much more vibrant and focused on highlighting one product per page.',
+      body: 'Version 1 was designed to incorporate an extra product on the page (The Jigsaw Magnet) and to highlight the social aspect of the community as an upsell for ideas of how people are using the product. Version 2 is a project in progress, it has a much more vibrant feel and is focused on highlighting one product per page.',
       columns: 2,
       columnInfo: [
         { image: './sticky9/Sticky9ProductV1.png', title: 'Version 1' },
@@ -131,9 +132,9 @@ const sticky9Slides = [
       title: 'Other Pages',
       skew: true,
       backgroundColor: '#ffffff',
-      bodyColor: '#45306C',
+      bodyColor: '#2b2b2b',
       titleColor: '#45306C',
-      body: 'I have created a number of other  responsive pages, to improve various parts on the site like customer service by designing a ‘Where is my order’ page and a more prominent way to highlight the Sticky9 app on the Download page.',
+      body: 'I have created a number of other responsive pages, to optimize various aspects of the site including customer service and app downloads.',
       className: 'slide--screenshot--sticky9',
       columnInfo: [
         { image: './sticky9/WismoDesktop.png', title: 'WISMO Desktop' },
@@ -154,7 +155,7 @@ const sticky9Slides = [
       backgroundColor: '#45306C',
       bodyColor: '#ffffff',
       titleColor: '#ffffff',
-      body: 'Increasing AOV (average order value) was a key factor in the company strategy. The solution was to introduce Upsell Modals which would prompt the user to “Add” an accessory to their basket without breaking the user flow or being too intrusive. These turned out to be highly successful after a run of A/B testing.',
+      body: 'How to increase AOV (average order value) was a key factor. The solution was to introduce upsell modals which would prompt the user to add an accessory to their basket without breaking the user flow or being too intrusive. These turned out to be highly successful after a run of A/B testing.',
       columns: 3,
       columnInfo: [
         { image: './sticky9/MagnetBoard.png', title: 'Magnet Board' },
@@ -170,9 +171,9 @@ const sticky9Slides = [
       title: 'MENU UI UPDATE',
       skew: true,
       backgroundColor: '#ffffff',
-      bodyColor: '#45306C',
+      bodyColor: '#2b2b2b',
       titleColor: '#45306C',
-      body: 'The menu was updated and rejigged to make it cleaner. The new menu also works better when translated into other languages. By splitting up the buttons into a new line, I was able to create more space and movement between the words and also make it easier to add additional menu items.',
+      body: 'The menu was updated to add more content and make it clearer across all devices. The new design also worked better when translated into other languages. By splitting up the menu and cart into a new line, I was able to create more space and movement between the words.',
       columns: 1,
       columnInfo: [
         { image: './sticky9/OldNavPart1.png', title: 'Old Nav' },
@@ -207,7 +208,7 @@ const transferWiseSlides = [
       backgroundImageUrl: '/transferwise/TransferwiseHomeHero.png',
       skew: true,
       project: {
-        body: 'PA’s new service (SNAPPA) is aimed at attracting and engaging younger audiences who increasingly consume content on mobile devices. SNAP.PA presents a visually led, shareable content with personality – encompassing news, sport, celebrity, social media, real life and more.',
+        body: 'TransferWise is an Estonian developed and UK-based peer-to-peer money transfer service launched in January 2011. More than £3 billion has been transferred through the App who supports more than 300 currency routes across the world. ',
         logo: '/transferwise/transferwiselogo.png',
         projectShotUrl: './transferwise/TransferwiseHomeMobile.png',
         projectColor: '#B02025'
@@ -224,7 +225,7 @@ const transferWiseSlides = [
       bodyColor: '#ffffff',
       titleColor: '#ffffff',
       oneColumnTitle: 'Version 1',
-      body: 'Below showcases the screens from the mobile flow of the site. The idea behind the design was to get the user into the story pages within a click from the main / home page. The navigation would slide in from the right, which will allow the users to scroll between trending tags.',
+      body: 'Created a concept onboarding process for the app. The idea was to help and understand how easy it is to use and send money abroad through a series of steps taking the user through a mock transaction.',
       columns: 4,
       columnInfo: [
         { image: './transferwise/OnboardingStep1.png', title: '' },
@@ -244,10 +245,10 @@ const transferWiseSlides = [
       title: 'SETTINGS AND FAQ',
       skew: true,
       backgroundColor: '#ffffff',
-      bodyColor: '#01C5FF',
+      bodyColor: '#2b2b2b',
       titleColor: '#01C5FF',
       oneColumnTitle: 'Drill down FAQ',
-      body: 'Below showcases the screens from the mobile flow of the site. The idea behind the design was to get the user into the story pages within a click from the main / home page. The navigation would slide in from the right, which will allow the users to scroll between trending tags.',
+      body: 'Created a mock version of the settings and FAQ page for the app, with a cleaner layout and a drilled down FAQ section to help users get to answers quicker and in turn making the whole process less stressful. ',
       columns: 4,
       columnInfo: [
         { image: './transferwise/SettingsAndFaQ1.png', title: '' },
