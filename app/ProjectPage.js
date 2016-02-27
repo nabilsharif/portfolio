@@ -38,9 +38,9 @@ const snappaSlides = [
       columns: 3,
       prototype_walkthrough:{
         columnInfo: [
-          { image: './snappa/home.png' },
-          { image: './snappa/story.png' },
-          { image: './snappa/nav.png' },
+          { image: './snappa/Home.png' },
+          { image: './snappa/Story.png' },
+          { image: './snappa/Nav.png' },
         ],
         description:{
           text: 'Prototype showing the user flow from landing page to story',
