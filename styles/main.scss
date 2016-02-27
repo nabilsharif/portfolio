@@ -19,13 +19,13 @@ html {
 
 @mixin S() {
   @media only screen and (max-width: 640px) {
-    @content; 
+    @content;
   }
 }
 
 @mixin M() {
   @media only screen and (max-width: 960px) {
-    @content; 
+    @content;
   }
 }
 
@@ -381,7 +381,7 @@ a.button {
     float: left;
     height: auto;
     padding: 1.5em*3 0;
-    poition: relative;
+    position: relative;
 
     @include S {
       padding-top: 3em !important;
@@ -398,3 +398,49 @@ a.button {
 
 }
 
+.prototype-walkthrough{
+  position: relative;
+  display: block;
+
+  >div{
+    float : left;
+    clear : both;
+  }
+
+  .description{
+    width : 100%;
+    padding : 80px 10px;
+
+    .text{
+      position: relative;
+      display: block;
+      float : left;
+      width : 50%;
+      font-size: 54px;
+      font-weight : bold;
+      color : #BCBCBC;
+      text-transform: uppercase;
+
+      line-height : 1.2em;
+    }
+
+    .gif{
+      position: relative;
+      display: block;
+      width : 40%;
+      float : right;
+    }
+
+    @include S {
+      .text{
+        width : 100%;
+        font-size : 30px;
+        padding-bottom : 20px;
+      }
+
+      .gif{
+        width : 100%;
+      }
+    }
+  }
+}

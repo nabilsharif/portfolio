@@ -9,17 +9,17 @@ const snappaSlides = [
     props: {
     }
   },
-  
+
   {
     component: 'ProjectHeroSlide',
     props: {
-      backgroundImageUrl: '/SnappaHomeHero.png',
+      backgroundImageUrl: '/snappa/SnappaHomeHero.png',
       skew: true,
       projectUrl: 'http://snappa.press.net',
       project: {
         body: 'PA’s new service (SNAPPA) is aimed at attracting and engaging younger audiences who increasingly consume content on mobile devices. SNAP.PA presents a visually led, shareable content with personality – encompassing news, sport, celebrity, social media, real life and more.',
-        logo: '/SnappaLogo.svg',
-        projectShotUrl: './SnappaHomeMobile.png',
+        logo: '/snappa/SnappaLogo.svg',
+        projectShotUrl: './snappa/SnappaHomeMobile.png',
         projectColor: '#B02025'
       }
     }
@@ -36,6 +36,17 @@ const snappaSlides = [
       titleColor: '#B02025',
       body: 'Below showcases the screens from the mobile flow of the site. The idea behind the design was to get the user into the story pages within a click from the landing page. The navigation would slide in from the right, which will allow the users to scroll between trending tags.',
       columns: 3,
+      prototype_walkthrough:{
+        columnInfo: [
+          { image: './snappa/home.png' },
+          { image: './snappa/story.png' },
+          { image: './snappa/nav.png' },
+        ],
+        description:{
+          text: 'Prototype showing the user flow from landing page to story',
+          gif: './snappa/design_walkthrough.gif', alt: 'design walkthrough',
+        }
+      },
       columnInfo: [
         { image: './mobile/SnappaCategoriesMobile.png', title: 'Homepage' },
         { image: './mobile/SnappaStoriesMobile', title: 'Story' },
@@ -92,7 +103,7 @@ const sticky9Slides = [
     props: {
     }
   },
-  
+
   {
     component: 'ProjectHeroSlide',
     props: {
@@ -193,7 +204,7 @@ const sticky9Slides = [
     }
   }
 
- 
+
 ]
 
 const transferWiseSlides = [
@@ -279,7 +290,7 @@ const projects = {
   transferwise: transferWiseSlides
 }
 
-export default class ProjectPage extends React.Component {  
+export default class ProjectPage extends React.Component {
   render() {
     return (
       <div className="page page--projectPage">
@@ -289,20 +300,3 @@ export default class ProjectPage extends React.Component {
   }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
